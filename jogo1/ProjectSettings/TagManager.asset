@@ -44,12 +44,18 @@ TagManager:
   - name: foto
     uniqueID: 2392247443
     locked: 0
+  - name: papel
+    uniqueID: 495238667
+    locked: 0
   - name: gato
     uniqueID: 409977435
     locked: 0
   - name: lata
     uniqueID: 3014808719
     locked: 0
-  - name: papel
-    uniqueID: 495238667
+  - name: pano
+    uniqueID: 3704234619
+    locked: 0
+  - name: sonico
+    uniqueID: 1857152573
     locked: 0
