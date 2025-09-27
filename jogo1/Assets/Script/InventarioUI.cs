@@ -5,16 +5,36 @@ using UnityEngine.UI;
 
 public class InventarioUI : MonoBehaviour
 {
+    public static InventarioUI instance;
     public Transform slotsParent;
     private Image[] slotsImages;
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        
+        if (instance == null)
+        {
+
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            InitializeUI();
+        }
+        else if (instance != this)
+        {
+            
+            Destroy(gameObject);
+            return; 
+        }
     }
 
     // Start is called before the first frame update
     void Start()
+    {
+
+    }
+
+    void InitializeUI()
     {
         if (slotsParent == null)
         {
@@ -30,7 +50,7 @@ public class InventarioUI : MonoBehaviour
 
         UpdateUI();
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -39,24 +59,46 @@ public class InventarioUI : MonoBehaviour
     }
     public void UpdateUI()
     {
+        
+        if (Inventario.instance == null) return;
+
         if (slotsImages == null) return;
 
         for (int i = 0; i < slotsImages.Length; i++)
         {
             if (i < Inventario.instance.itens.Count)
             {
-                if (Inventario.instance.itens[i].icone != null)
+                
+                if (Inventario.instance.itens[i] != null)
                 {
-                    slotsImages[i].sprite = Inventario.instance.itens[i].icone;
-                    slotsImages[i].color = Color.white;
+                    
+                    if (Inventario.instance.itens[i].icone != null) 
+                    {
+                        slotsImages[i].sprite = Inventario.instance.itens[i].icone;
+                        slotsImages[i].color = Color.white;
+                    }
+                    else
+                    {
+                        
+                        slotsImages[i].sprite = null;
+                        slotsImages[i].color = new Color(1, 1, 1, 0);
+                    }
+                }
+                else
+                {
+                   
+                    slotsImages[i].sprite = null;
+                    slotsImages[i].color = new Color(1, 1, 1, 0);
                 }
             }
             else
             {
+                
                 slotsImages[i].sprite = null;
                 slotsImages[i].color = new Color(1, 1, 1, 0);
             }
         }
     }
 }
+
 
