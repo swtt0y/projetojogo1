@@ -31,14 +31,14 @@ public class InventarioUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        UpdateUI();
     }
 
     void InitializeUI()
     {
         if (slotsParent == null)
         {
-            Debug.LogError("SlotsParent não atribuído no Inspector!");
+            Debug.LogError("SlotsParent nï¿½o atribuï¿½do no Inspector!");
             return;
         }
 
@@ -60,21 +60,21 @@ public class InventarioUI : MonoBehaviour
     public void UpdateUI()
     {
         
-        if (Inventario.instance == null) return;
+        if (Inventario.inventario == null) return;
 
         if (slotsImages == null) return;
 
         for (int i = 0; i < slotsImages.Length; i++)
         {
-            if (i < Inventario.instance.itens.Count)
+            if (i < Inventario.inventario.itens.Count)
             {
                 
-                if (Inventario.instance.itens[i] != null)
+                if (Inventario.inventario.itens[i] != null)
                 {
                     
-                    if (Inventario.instance.itens[i].icone != null) 
+                    if (Inventario.inventario.itens[i].icone != null) 
                     {
-                        slotsImages[i].sprite = Inventario.instance.itens[i].icone;
+                        slotsImages[i].sprite = Inventario.inventario.itens[i].icone;
                         slotsImages[i].color = Color.white;
                     }
                     else

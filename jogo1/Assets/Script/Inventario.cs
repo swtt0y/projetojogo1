@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Inventario : MonoBehaviour
 {
-    public static Inventario instance;
-    public List<Item> itens = new List<Item>();
+    public static Inventario inventario;
+    public List<Coletavel> itens = new List<Coletavel>();
 
     void Awake()
     {
-        if(instance==null)
+        if(inventario==null)
         {
-            instance = this;
+            inventario = this;
             DontDestroyOnLoad(gameObject);
         }
         else 
@@ -20,21 +20,21 @@ public class Inventario : MonoBehaviour
         }
     }
 
-    public void Add(Item item)
+    public void Add(Coletavel item)
     {
-        itens.Add(item);
-        Debug.Log(item.nameItem + " adicionado!");
-       
-    }
+        if (!itens.Contains(item)) {
+            itens.Add(item);
+            Debug.Log(item + " adicionado!");
 
-    public void Remove(Item item)
-    {
-        if (itens.Contains(item)) 
-        {
-            itens.Remove(item);
-            Debug.Log(item.nameItem + " removido!");
+            if (InventarioUI.instance != null) {
+                InventarioUI.instance.UpdateUI();
+            }
         }
     }
 
+    public bool JaTem(Coletavel item)
+    {
+        return itens.Contains(item);
+    }
 }
 
