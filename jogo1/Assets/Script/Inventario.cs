@@ -4,21 +4,37 @@ using UnityEngine;
 
 public class Inventario : MonoBehaviour
 {
-    public static Inventario inventario;
-    public Lista<Item> itens = new Lista<Item>();
-    public int tam = 10;
+    public static Inventario instance;
+    public List<Item> itens = new List<Item>();
 
-    void awake()
+    void Awake()
     {
-        if (inventario == null) inventario = this;
+        if(instance==null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else 
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void Add(Item item)
     {
         itens.Add(item);
-        Debug.Log(item.Nomeitem + " adicionado!");
+        Debug.Log(item.nameItem + " adicionado!");
+       
     }
 
+    public void Remove(Item item)
+    {
+        if (itens.Contains(item)) 
+        {
+            itens.Remove(item);
+            Debug.Log(item.nameItem + " removido!");
+        }
+    }
 
 }
 
