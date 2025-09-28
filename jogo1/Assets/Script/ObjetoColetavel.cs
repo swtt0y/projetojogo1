@@ -7,11 +7,19 @@ public class ObjetoColetavel : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (podeColetar)
+        if (!podeColetar) return;
+
+        // Pega a referência da câmera
+        CameraColeta cameraColeta = Camera.main.GetComponent<CameraColeta>();
+
+        if (cameraColeta != null)
         {
-            CameraColeta cameraColeta = Camera.main.GetComponent<CameraColeta>();
             cameraColeta.ColetarObjeto(idObjeto);
-            Destroy(gameObject); // Some da cena ao coletar
+            Debug.Log("Objeto coletado: " + gameObject.name);
         }
+
+        // Destrói o GameObject imediatamente
+        Destroy(gameObject);
     }
 }
+    

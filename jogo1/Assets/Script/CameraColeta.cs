@@ -7,13 +7,14 @@ public class CameraColeta : MonoBehaviour
     public void ColetarObjeto(int idObjeto)
     {
         objetoNaMao = idObjeto;
+        Debug.Log("Objeto coletado: " + idObjeto);
     }
 
     public void DespejarObjeto(LocalDespejo local)
     {
         if (objetoNaMao != -1 && local.AceitaObjeto(objetoNaMao))
         {
-         
+            local.OnPuzzleResolve(objetoNaMao);
             objetoNaMao = -1;
 
         }

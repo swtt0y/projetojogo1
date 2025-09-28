@@ -133,11 +133,11 @@ GameObject:
   - component: {fileID: 113218461}
   - component: {fileID: 113218460}
   - component: {fileID: 113218462}
+  - component: {fileID: 113218463}
   - component: {fileID: 113218464}
-  - component: {fileID: 113218465}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: padrao
-  m_TagString: Coletavel
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,7 +241,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.4160476, y: 1.055088}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -252,24 +252,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.1, y: 2.54}
+  m_Size: {x: 7.9320955, y: 4.6501756}
   m_EdgeRadius: 0
---- !u!114 &113218464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 113218459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9397c33694935444cb450dfe6f46f7f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  identificador: padrao
-  icone: {fileID: 21300000, guid: 39a5f59692b32ba45ad8c0f8da777629, type: 3}
-  descricao: quem sabe seria a ordem de algo?
---- !u!114 &113218465
+--- !u!114 &113218463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,7 +267,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObjeto: 2
-  podeColetar: 1
+  podeColetar: 0
+--- !u!114 &113218464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113218459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06f4850d047921429185e18680d9ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &375239436
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +291,6 @@ GameObject:
   - component: {fileID: 375239438}
   - component: {fileID: 375239437}
   - component: {fileID: 375239439}
-  - component: {fileID: 375239441}
   m_Layer: 5
   m_Name: pano
   m_TagString: Coletavel
@@ -404,21 +400,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.18763712, y: 0.11600099}
   m_Size: {x: 2.2229567, y: 3.381129}
   m_Direction: 0
---- !u!114 &375239441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375239436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9397c33694935444cb450dfe6f46f7f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  identificador: pano
-  icone: {fileID: 21300000, guid: 3c0b024a15db140428442ab6c48b12e5, type: 3}
-  descricao: Pano
 --- !u!1 &562740149
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,42 +410,15 @@ GameObject:
   m_Component:
   - component: {fileID: 562740152}
   - component: {fileID: 562740151}
-  - component: {fileID: 562740150}
-  - component: {fileID: 562740153}
-  m_Layer: 0
+  - component: {fileID: 562740154}
+  - component: {fileID: 562740155}
+  m_Layer: 5
   m_Name: gato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &562740150
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562740149}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 2
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &562740151
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -526,13 +480,58 @@ Transform:
   m_GameObject: {fileID: 562740149}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.66, y: 1.25, z: 181}
-  m_LocalScale: {x: 0.9532, y: 0.9172, z: 1}
+  m_LocalPosition: {x: 8.83, y: 0.8516, z: 181}
+  m_LocalScale: {x: 0.7261477, y: 0.67474085, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &562740153
+--- !u!61 &562740154
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562740149}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.23815906, y: 0.00000017881393}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 4.4}
+    newSize: {x: 5, y: 4.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.7827442, y: 2.5773988}
+  m_EdgeRadius: 0
+--- !u!114 &562740155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -546,6 +545,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idAceito: 1
   objetoParaLiberar: {fileID: 113218459}
+  proximoObjeto: {fileID: 113218463}
+  verificadorDoLocal: {fileID: 562740149}
 --- !u!1 &782355177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,7 +1252,6 @@ GameObject:
   - component: {fileID: 1759341609}
   - component: {fileID: 1759341608}
   - component: {fileID: 1759341612}
-  - component: {fileID: 1759341613}
   m_Layer: 5
   m_Name: fotografia
   m_TagString: Coletavel
@@ -1371,21 +1371,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.69, y: 4.82}
   m_EdgeRadius: 0
---- !u!114 &1759341613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759341606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9397c33694935444cb450dfe6f46f7f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  identificador: foto
-  icone: {fileID: 21300000, guid: 892743b76186d664daea36ffc426be35, type: 3}
-  descricao: Uma foto especial.
 --- !u!1 &1846419863
 GameObject:
   m_ObjectHideFlags: 0
