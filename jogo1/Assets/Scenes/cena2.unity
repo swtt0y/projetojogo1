@@ -328,10 +328,11 @@ GameObject:
   - component: {fileID: 351820429}
   - component: {fileID: 351820428}
   - component: {fileID: 351820430}
+  - component: {fileID: 351820431}
   - component: {fileID: 351820432}
   m_Layer: 5
   m_Name: lata
-  m_TagString: Coletavel
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -448,6 +449,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.4214826, y: 2.2265894}
   m_EdgeRadius: 0
+--- !u!114 &351820431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351820427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3487c15046b4d44286f37e666c4f309, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 11400000, guid: a2b60cc9a4e072f47a9943ddb360df73, type: 2}
 --- !u!114 &351820432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,12 +471,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 351820427}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9397c33694935444cb450dfe6f46f7f8, type: 3}
+  m_Script: {fileID: 11500000, guid: fa7e5da9d185f8a4e97e3b4c8d7bca73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identificador: lata
-  icone: {fileID: 21300000, guid: a1d5ee95444f4dd46ac0693536b3550e, type: 3}
-  descricao: Lata de Sardinha
+  idObjeto: 1
+  podeColetar: 1
 --- !u!1 &1026015385
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,10 +887,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1641223827}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64f4e98eaffed604696fe2b4fa320072, type: 3}
+  m_Script: {fileID: 11500000, guid: e74ddd6a271b6194f91542b4c0c20ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanciaMaxima: 200
+  objetoNaMao: -1
 --- !u!1 &1755729229
 GameObject:
   m_ObjectHideFlags: 0
