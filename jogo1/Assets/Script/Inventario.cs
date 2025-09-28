@@ -24,7 +24,7 @@ public class Inventario : MonoBehaviour
     {
         if (!itens.Contains(item)) {
             itens.Add(item);
-            Debug.Log(item + " adicionado!");
+            Debug.Log(item.name + " adicionado!");
 
             if (InventarioUI.instance != null) {
                 InventarioUI.instance.UpdateUI();

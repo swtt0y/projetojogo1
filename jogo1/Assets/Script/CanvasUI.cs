@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CanvasUI : MonoBehaviour
 {
-   private static CanvasUI canvas;
+   private static CanvasUI instance;
 
     void Awake()
     {
-        if (canvas == null)
+        if (instance == null)
         {
-            canvas = this;
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
