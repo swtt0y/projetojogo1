@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 113218461}
   - component: {fileID: 113218460}
   - component: {fileID: 113218462}
-  - component: {fileID: 113218464}
+  - component: {fileID: 113218463}
   m_Layer: 5
   m_Name: padrao
   m_TagString: Coletavel
@@ -253,7 +253,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.1, y: 2.54}
   m_EdgeRadius: 0
---- !u!114 &113218464
+--- !u!114 &113218463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,12 +262,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 113218459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9397c33694935444cb450dfe6f46f7f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 64d595d4cdf881f4385ac95f4658fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identificador: padrao
-  icone: {fileID: 21300000, guid: 39a5f59692b32ba45ad8c0f8da777629, type: 3}
-  descricao: quem sabe seria a ordem de algo?
+  dadosItem: {fileID: 11400000, guid: ac1ea5a1c84a58f4884aebe16647d60a, type: 2}
+  atualID: padrao01
 --- !u!1 &375239436
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +278,7 @@ GameObject:
   - component: {fileID: 375239438}
   - component: {fileID: 375239437}
   - component: {fileID: 375239439}
-  - component: {fileID: 375239441}
+  - component: {fileID: 375239440}
   m_Layer: 5
   m_Name: pano
   m_TagString: Coletavel
@@ -389,7 +388,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.18763712, y: 0.11600099}
   m_Size: {x: 2.2229567, y: 3.381129}
   m_Direction: 0
---- !u!114 &375239441
+--- !u!114 &375239440
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -398,12 +397,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 375239436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9397c33694935444cb450dfe6f46f7f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 64d595d4cdf881f4385ac95f4658fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identificador: pano
-  icone: {fileID: 21300000, guid: 3c0b024a15db140428442ab6c48b12e5, type: 3}
-  descricao: Pano
+  dadosItem: {fileID: 11400000, guid: 8f6ba76c99d410145947c991da522c22, type: 2}
+  atualID: pano01
 --- !u!1 &562740149
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,8 +549,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 34.62799, y: 0}
-  m_SizeDelta: {x: 69.255005, y: 38.640015}
+  m_AnchoredPosition: {x: 29, y: -11.5099945}
+  m_SizeDelta: {x: 69.26, y: 61.66}
   m_Pivot: {x: 0.5000003, y: 0.5}
 --- !u!114 &782355179
 MonoBehaviour:
@@ -883,8 +881,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -34.62799, y: 0}
-  m_SizeDelta: {x: 69.255005, y: 38.640015}
+  m_AnchoredPosition: {x: -25, y: -11.509993}
+  m_SizeDelta: {x: 69.26, y: 61.66}
   m_Pivot: {x: 0.5000003, y: 0.5}
 --- !u!114 &984093708
 MonoBehaviour:
@@ -1350,12 +1348,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1759341606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9397c33694935444cb450dfe6f46f7f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 64d595d4cdf881f4385ac95f4658fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identificador: foto
-  icone: {fileID: 21300000, guid: 892743b76186d664daea36ffc426be35, type: 3}
-  descricao: Uma foto especial.
+  dadosItem: {fileID: 11400000, guid: 4b785d9a321969445bd95a003a8c6c93, type: 2}
+  atualID: foto01
 --- !u!1 &1846419863
 GameObject:
   m_ObjectHideFlags: 0

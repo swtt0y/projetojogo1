@@ -4,37 +4,43 @@ using UnityEngine;
 
 public class Inventario : MonoBehaviour
 {
-    public static Inventario inventario;
-    public List<Coletavel> itens = new List<Coletavel>();
+    public static Inventario instance;
+
+    public List<DadosItem> itens = new List<DadosItem>();
+    public int capacidade = 5;
+
+    // Armazena IDs de objetos coletados
+    public HashSet<string> objetosColetados = new HashSet<string>();
 
     void Awake()
     {
-        if(inventario==null)
+        if (instance == null)
         {
-            inventario = this;
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else 
+        else
         {
             Destroy(gameObject);
         }
     }
 
-    public void Add(Coletavel item)
+    public void AdicionarItem(DadosItem item, string atualID = null)
     {
-        if (!itens.Contains(item)) {
-            itens.Add(item);
-            Debug.Log(item.name + " adicionado!");
+        if (itens.Count >= capacidade) return;
 
-            if (InventarioUI.instance != null) {
-                InventarioUI.instance.UpdateUI();
-            }
+        itens.Add(item);
+
+        if (!string.IsNullOrEmpty(atualID))
+        {
+            objetosColetados.Add(atualID); 
         }
+        if (InventarioUI.instance != null) InventarioUI.instance.UpdateUI();
     }
 
-    public bool JaTem(Coletavel item)
+    public bool FoiColetado(string atualID)
     {
-        return itens.Contains(item);
+        return objetosColetados.Contains(atualID);
     }
-}
 
+}

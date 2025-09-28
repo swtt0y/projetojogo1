@@ -5,69 +5,87 @@ using UnityEngine.UI;
 
 public class InventarioUI : MonoBehaviour
 {
-    public static InventarioUI instance;
-    public Transform slotsParent;   
-    private Image[] slotsImages;
+     public static InventarioUI instance;
+
+    [Tooltip("Painel que contém apenas os slots (filhos diretos devem ser os Images dos slots).")]
+    public Transform slotsParent;
+
+    private List<Image> slotsImages = new List<Image>();
 
     void Awake()
     {
+        // Singleton
         if (instance == null)
         {
             instance = this;
-            InitializeUI();
+            DontDestroyOnLoad(gameObject);
         }
         else if (instance != this)
         {
             Destroy(gameObject);
             return;
         }
-        InitializeUI();
-    }
 
-    void InitializeUI()
-    {
+        // validação
         if (slotsParent == null)
         {
-            Debug.LogError("SlotsParent não atribuído no Inspector!");
+            Debug.LogError("InventarioUI: atribua slotsParent no Inspector!");
             return;
         }
 
-        slotsImages = slotsParent.GetComponentsInChildren<Image>();
-        if (slotsImages.Length == 0)
+        // pega todas as Images dentro do painel, mas filtra só os filhos diretos (evita pegar o background do painel)
+        slotsImages.Clear();
+        Image[] all = slotsParent.GetComponentsInChildren<Image>(true);
+        foreach (Image img in all)
         {
-            Debug.LogError("Nenhum slot Image encontrado como filho de slotsParent!");
+            slotsImages.Add(img);
         }
 
-        
+        if (slotsImages.Count == 0)
+            Debug.LogWarning("InventarioUI: nenhum Image encontrado como filho direto de slotsParent. Verifique a hierarquia.");
+
+        // atualiza UI já no Awake
         UpdateUI();
     }
 
-   
+    // chama publicamente quando o inventário mudar
     public void UpdateUI()
     {
-        if (Inventario.inventario == null || slotsImages == null) return;
+        if (Inventario.instance == null) return;
+        if (slotsImages == null || slotsImages.Count == 0) return;
 
-        for (int i = 0; i < slotsImages.Length; i++)
+        for (int i = 0; i < slotsImages.Count; i++)
         {
-            if (i < Inventario.inventario.itens.Count)
+            Image slot = slotsImages[i];
+
+            if (i < Inventario.instance.itens.Count)
             {
-                var item = Inventario.inventario.itens[i];
+                var item = Inventario.instance.itens[i]; // ItemData ou classe que você usa
                 if (item != null && item.icone != null)
                 {
-                    slotsImages[i].sprite = item.icone;
-                    slotsImages[i].color = Color.white;
+                    slot.sprite = item.icone;
+                    slot.color = Color.white;
                 }
                 else
                 {
-                    slotsImages[i].sprite = null;
-                    slotsImages[i].color = new Color(1, 1, 1, 0);
+                    slot.sprite = null;
+                    slot.color = new Color(1, 1, 1, 0);
                 }
             }
             else
             {
-                slotsImages[i].sprite = null;
-                slotsImages[i].color = new Color(1, 1, 1, 0);
+                slot.sprite = null;
+                slot.color = new Color(1, 1, 1, 0);
             }
         }
     }
+
+    // método auxiliar para debug rápido
+    [ContextMenu("LogSlots")]
+    void LogSlots()
+    {
+        Debug.Log($"InventarioUI: slots count = {slotsImages.Count}");
+        for (int i=0;i<slotsImages.Count;i++) Debug.Log($"Slot {i}: {slotsImages[i].name}");
+    }
+
 }
