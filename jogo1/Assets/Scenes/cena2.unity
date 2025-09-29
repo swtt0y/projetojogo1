@@ -462,6 +462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idObjeto: 1
   podeColetar: 1
+  nomeDoObjeto: lata
 --- !u!1 &1026015385
 GameObject:
   m_ObjectHideFlags: 0
