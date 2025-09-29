@@ -3,22 +3,33 @@ using UnityEngine;
 public class ObjetoColetavel : MonoBehaviour
 {
     public int idObjeto;
-    public bool podeColetar = true; // Você pode bloquear até que alguma condição seja atendida
+    public bool podeColetar = true; // Vocï¿½ pode bloquear atï¿½ que alguma condiï¿½ï¿½o seja atendida
+    public string nomeDoObjeto;
+
+    void Awake()
+    {
+        if (PlayerPrefs.HasKey(nomeDoObjeto))
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void OnMouseDown()
     {
         if (!podeColetar) return;
 
-        // Pega a referência da câmera
+        // Pega a referï¿½ncia da cï¿½mera
         CameraColeta cameraColeta = Camera.main.GetComponent<CameraColeta>();
 
         if (cameraColeta != null)
         {
             cameraColeta.ColetarObjeto(idObjeto);
+            PlayerPrefs.SetString(nomeDoObjeto, "coletado");
+            
             Debug.Log("Objeto coletado: " + gameObject.name);
         }
 
-        // Destrói o GameObject imediatamente
+        // Destrï¿½i o GameObject imediatamente
         Destroy(gameObject);
     }
 }

@@ -268,6 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idObjeto: 2
   podeColetar: 0
+  nomeDoObjeto: 
 --- !u!114 &113218464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,6 +546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idAceito: 1
   objetoParaLiberar: {fileID: 113218459}
+  nomeDoObjetoParaLiberar: lata
   proximoObjeto: {fileID: 113218463}
   verificadorDoLocal: {fileID: 562740149}
 --- !u!1 &782355177

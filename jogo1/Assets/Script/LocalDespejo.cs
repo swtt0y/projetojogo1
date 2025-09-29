@@ -1,3 +1,4 @@
+using System;
 using JetBrains.Annotations;
 using UnityEngine;
 
@@ -5,6 +6,7 @@ public class LocalDespejo : MonoBehaviour
 {
     public int idAceito; 
     public GameObject objetoParaLiberar;
+    public String nomeDoObjetoParaLiberar;
     public ObjetoColetavel proximoObjeto;
     public GameObject verificadorDoLocal;
 
@@ -17,6 +19,20 @@ public class LocalDespejo : MonoBehaviour
 
     public void OnPuzzleResolve(int idObjeto)
     {
+        if (!PlayerPrefs.HasKey(nomeDoObjetoParaLiberar))
+        {
+            Debug.Log("Objeto nunca foi coletado");
+
+            if (PlayerPrefs.GetString(nomeDoObjetoParaLiberar) != "coletado")
+            {
+                Debug.Log("Objeto jÃ¡ utilizado anteriormente.");
+                return;
+            }
+            return;
+        }
+
+        Debug.Log("Objeto coletado anteriormente.");
+
         if (AceitaObjeto(idObjeto))
         {
             if (objetoParaLiberar != null)
@@ -25,23 +41,27 @@ public class LocalDespejo : MonoBehaviour
             if (proximoObjeto != null)
                 proximoObjeto.podeColetar = true;
 
-           
+
             if (verificadorDoLocal != null)
                 verificadorDoLocal.SetActive(false);
 
-            Debug.Log("Puzzle resolvido e próximo objeto liberado!");
+            Debug.Log("Puzzle resolvido e prï¿½ximo objeto liberado!");
+            PlayerPrefs.SetString(nomeDoObjetoParaLiberar, "utilizado");
         }
         else
         {
-            Debug.Log("Objeto não aceito!");
+            Debug.Log("Objeto nï¿½o aceito!");
         }
+            
+        
     }
 
 
     void OnMouseDown()
     {
- 
-        CameraColeta cameraColeta = Camera.main.GetComponent<CameraColeta>();
-        cameraColeta.DespejarObjeto(this);
+        Debug.Log("Clicou no local de despejo");
+        OnPuzzleResolve(idAceito); // Apenas para teste
+        //CameraColeta cameraColeta = Camera.main.GetComponent<CameraColeta>();
+        //cameraColeta.DespejarObjeto(this);
     }
 }
