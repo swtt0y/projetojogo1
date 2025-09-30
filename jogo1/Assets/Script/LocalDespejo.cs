@@ -36,14 +36,27 @@ public class LocalDespejo : MonoBehaviour
         if (AceitaObjeto(idObjeto))
         {
             if (objetoParaLiberar != null)
+            {
                 objetoParaLiberar.SetActive(true);
-
+                ZoomObjeto zoom = objetoParaLiberar.GetComponent<ZoomObjeto>();
+                if (zoom != null)
+                {
+                    zoom.AtivarZoom();
+                }
+                    
+            }
+                
+              
             if (proximoObjeto != null)
+            {
                 proximoObjeto.podeColetar = true;
-
+            }
+                
 
             if (verificadorDoLocal != null)
+            {
                 verificadorDoLocal.SetActive(false);
+            }
 
             Debug.Log("Puzzle resolvido e pr�ximo objeto liberado!");
             PlayerPrefs.SetString(nomeDoObjetoParaLiberar, "utilizado");

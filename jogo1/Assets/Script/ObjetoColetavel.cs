@@ -28,7 +28,7 @@ public class ObjetoColetavel : MonoBehaviour
             
             Debug.Log("Objeto coletado: " + gameObject.name);
         }
-
+        
         // Destr�i o GameObject imediatamente
         Destroy(gameObject);
     }
