@@ -328,8 +328,8 @@ Transform:
   m_GameObject: {fileID: 226912263}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4212, y: -0.1229, z: 0}
-  m_LocalScale: {x: 14.169278, y: 13.108854, z: 1}
+  m_LocalPosition: {x: -0.0115, y: -0.1229, z: 0}
+  m_LocalScale: {x: 14.366523, y: 13.108854, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -552,8 +552,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -362.5, y: 7.3}
-  m_SizeDelta: {x: 119.41, y: 43.447}
+  m_AnchoredPosition: {x: -673, y: 16.45}
+  m_SizeDelta: {x: 302.95, y: 95.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1013535942
 MonoBehaviour:
@@ -604,7 +604,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12680054, y: 0.05883789}
+  m_Offset: {x: -0.12683105, y: -0.9174347}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -615,7 +615,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 119.552765, y: 44.018204}
+  m_Size: {x: 303.09186, y: 92.83179}
   m_EdgeRadius: 0
 --- !u!114 &1013535944
 MonoBehaviour:
@@ -877,8 +877,8 @@ Transform:
   m_GameObject: {fileID: 1842650525}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -362.97818, y: 35.313667, z: 0}
-  m_LocalScale: {x: 12.330741, y: 10.921954, z: 57.89126}
+  m_LocalPosition: {x: -670, y: 91.86, z: 0}
+  m_LocalScale: {x: 21.57761, y: 20.025972, z: 57.89126}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1951937557}
@@ -932,12 +932,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1035,8 +1035,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.48670244}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -35, y: 3.1515}
-  m_SizeDelta: {x: 83.34, y: 60.87}
+  m_AnchoredPosition: {x: -97.053, y: 5.65}
+  m_SizeDelta: {x: 194.1, y: 129.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2027099582
 MonoBehaviour:
