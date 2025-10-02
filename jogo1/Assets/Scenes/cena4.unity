@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 77.595, y: 0}
-  m_SizeDelta: {x: 155.19, y: 94.95}
+  m_AnchoredPosition: {x: 77.595, y: -0.00000095367}
+  m_SizeDelta: {x: 155.19, y: 126.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &75487383
 MonoBehaviour:
@@ -795,7 +795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21.521, y: -4.56}
+  m_AnchoredPosition: {x: -21.77, y: -4.5}
   m_SizeDelta: {x: 139.866, y: 77.926}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1372013423
@@ -905,7 +905,7 @@ GameObject:
   - component: {fileID: 1511129545}
   - component: {fileID: 1511129544}
   m_Layer: 5
-  m_Name: Button
+  m_Name: FinishBotao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -928,7 +928,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 859.7, y: -372.41}
+  m_AnchoredPosition: {x: 841, y: -387}
   m_SizeDelta: {x: 432.15, y: 103.98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511129544
@@ -988,7 +988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.08327954, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.0018940151, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1079,8 +1079,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4291085508
-  m_fontColor: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1092,18 +1092,18 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 2192
+  m_TextStyleHashCode: 93368250
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 8
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1183,7 +1183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.701, y: -4.602}
+  m_AnchoredPosition: {x: 20.83, y: -4.54}
   m_SizeDelta: {x: 132.609, y: 73.179}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1718380950
