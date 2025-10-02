@@ -5,6 +5,7 @@ public class ZoomObjeto : MonoBehaviour
     private Vector3 escalaOriginal;
     private Vector3 posicaoOriginal;
     private bool ampliado = false;
+    public Dialogo3 dialogo3;
 
     [SerializeField] private float fatorZoom = 2f;
     [SerializeField] private bool sempreNoCentro = false;
@@ -25,9 +26,12 @@ public class ZoomObjeto : MonoBehaviour
             if (sempreNoCentro)
                 transform.position = Vector3.zero; // centro da tela
             else
-                transform.position = posicaoCentral; // posição manual
-
+            {
+                transform.position = posicaoCentral; // posiï¿½ï¿½o manual
+                dialogo3.Padrao();
+            }   
             ampliado = true;
+            
         }
     }
 
@@ -42,5 +46,7 @@ public class ZoomObjeto : MonoBehaviour
     {
         if (ampliado)
             ResetarZoom(); // permite fechar o zoom clicando
+        
     }
+
 }

@@ -46,7 +46,6 @@ public class LocalDespejo : MonoBehaviour
                     
             }
                 
-              
             if (proximoObjeto != null)
             {
                 proximoObjeto.podeColetar = true;
