@@ -13,8 +13,13 @@ public class ZoomObjeto : MonoBehaviour
 
     void Start()
     {
+        if (PlayerPrefs.GetInt(gameObject.name, 0) == 1)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
         escalaOriginal = transform.localScale;
-        posicaoOriginal = transform.position;
     }
 
     public void AtivarZoom()
@@ -24,10 +29,10 @@ public class ZoomObjeto : MonoBehaviour
             transform.localScale = escalaOriginal * fatorZoom;
 
             if (sempreNoCentro)
-                transform.position = Vector3.zero; // centro da tela
+                transform.position = Vector3.zero; 
             else
             {
-                transform.position = posicaoCentral; // posi��o manual
+                transform.position = posicaoCentral;
                 dialogo3.Padrao();
             }   
             ampliado = true;
@@ -35,17 +40,15 @@ public class ZoomObjeto : MonoBehaviour
         }
     }
 
-    public void ResetarZoom()
-    {
-        transform.localScale = escalaOriginal;
-        transform.position = posicaoOriginal;
-        ampliado = false;
-    }
-
+    
     void OnMouseDown()
     {
         if (ampliado)
-            ResetarZoom(); // permite fechar o zoom clicando
+        {
+            PlayerPrefs.SetInt(gameObject.name, 1);
+           
+        }
+        
         
     }
 
