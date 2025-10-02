@@ -73,8 +73,6 @@ public class LocalDespejo : MonoBehaviour
     void OnMouseDown()
     {
         Debug.Log("Clicou no local de despejo");
-        OnPuzzleResolve(idAceito); // Apenas para teste
-        //CameraColeta cameraColeta = Camera.main.GetComponent<CameraColeta>();
-        //cameraColeta.DespejarObjeto(this);
+        OnPuzzleResolve(idAceito); 
     }
 }

@@ -3,7 +3,6 @@ using UnityEngine;
 public class ZoomObjeto : MonoBehaviour
 {
     private Vector3 escalaOriginal;
-    private Vector3 posicaoOriginal;
     private bool ampliado = false;
 
     [SerializeField] private float fatorZoom = 2f;
@@ -12,8 +11,12 @@ public class ZoomObjeto : MonoBehaviour
 
     void Start()
     {
+        if (PlayerPrefs.GetInt(gameObject.name, 0) == 1)
+        {
+            Destroy(gameObject); 
+            return;
+        }
         escalaOriginal = transform.localScale;
-        posicaoOriginal = transform.position;
     }
 
     public void AtivarZoom()
@@ -23,24 +26,22 @@ public class ZoomObjeto : MonoBehaviour
             transform.localScale = escalaOriginal * fatorZoom;
 
             if (sempreNoCentro)
-                transform.position = Vector3.zero; // centro da tela
+                transform.position = Vector3.zero; 
             else
-                transform.position = posicaoCentral; // posição manual
+                transform.position = posicaoCentral; 
 
             ampliado = true;
         }
     }
 
-    public void ResetarZoom()
-    {
-        transform.localScale = escalaOriginal;
-        transform.position = posicaoOriginal;
-        ampliado = false;
-    }
-
+ 
     void OnMouseDown()
     {
         if (ampliado)
-            ResetarZoom(); // permite fechar o zoom clicando
+        {
+            PlayerPrefs.SetInt(gameObject.name, 1);
+            Destroy(gameObject);
+        }
+         
     }
 }
