@@ -224,8 +224,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.1642e-10, y: 0}
-  m_SizeDelta: {x: 2219.4, y: 1008.45}
+  m_AnchoredPosition: {x: 2.93, y: 0.00000047684}
+  m_SizeDelta: {x: 2027.1, y: 1095}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &434836122
 MonoBehaviour:
@@ -300,7 +300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 38.405, y: -219.42}
+  m_AnchoredPosition: {x: 38.40503, y: -219.41998}
   m_SizeDelta: {x: -1020.9, y: -483.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &583332262
@@ -727,8 +727,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1c438a12c73e04b87bfd8fa46ca1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicanv: {fileID: 8300000, guid: 488d101c4ced655448f2b735cb1147b1, type: 3}
   vitoria: {fileID: 8300000, guid: d294df69b17213c4cb7099e0a04d464c, type: 3}
+  fundo: {fileID: 0}
 --- !u!82 &1174454702
 AudioSource:
   m_ObjectHideFlags: 0
