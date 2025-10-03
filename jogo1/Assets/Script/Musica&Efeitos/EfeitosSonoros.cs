@@ -12,16 +12,14 @@ public class EfeitosSonoros : MonoBehaviour
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.playOnAwake = false; 
+        
     }
 
     
     public void TocarSom()
     {
-        if (efeito != null && audioSource != null)
-        {
-            audioSource.PlayOneShot(efeito, 1f);
-        }
+
+       audioSource.PlayOneShot(efeito);
        
     }
 

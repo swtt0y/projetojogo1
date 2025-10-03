@@ -5,7 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class TelasFinais : MonoBehaviour
 {
-   public void Menu()
+    public AudioClip vitoria;
+    public void Start()
+    {
+       FindObjectOfType<MusicaFundo>().tocarMusicaUma(vitoria);
+
+    }
+    public void Menu()
    {
     SceneManager.LoadScene("menu");
    }

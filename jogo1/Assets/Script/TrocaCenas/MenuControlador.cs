@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuControlador : MonoBehaviour
 {
+    public AudioClip musicamenu;
+    private void Start()
+    {
+        FindObjectOfType<MusicaFundo>().trocarMusica(musicamenu);
+    }
     public void Jogar()
     {
         SceneManager.LoadScene("cena1");

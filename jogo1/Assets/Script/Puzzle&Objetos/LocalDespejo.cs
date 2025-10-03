@@ -9,6 +9,7 @@ public class LocalDespejo : MonoBehaviour
     public String nomeDoObjetoParaLiberar;
     public ObjetoColetavel proximoObjeto;
     public GameObject verificadorDoLocal;
+    
 
     public bool AceitaObjeto(int idObjeto)
     {
@@ -43,6 +44,7 @@ public class LocalDespejo : MonoBehaviour
                 {
                     zoom.AtivarZoom();
                 }
+             
                     
             }
                 
