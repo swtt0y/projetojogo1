@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuControlador : MonoBehaviour
 {
     public AudioClip musicamenu;
+    public AudioClip fundo;
     private void Start()
     {
         FindObjectOfType<MusicaFundo>().trocarMusica(musicamenu);
@@ -13,6 +14,7 @@ public class MenuControlador : MonoBehaviour
     public void Jogar()
     {
         SceneManager.LoadScene("cena1");
+        FindObjectOfType<MusicaFundo>().trocarMusica(fundo);
         PlayerPrefs.DeleteAll();
     }
     public GameObject infos;

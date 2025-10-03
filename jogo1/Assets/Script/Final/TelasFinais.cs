@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class TelasFinais : MonoBehaviour
 {
     public AudioClip vitoria;
+    public AudioClip fundo;
     public void Start()
     {
        FindObjectOfType<MusicaFundo>().tocarMusicaUma(vitoria);
@@ -18,8 +19,9 @@ public class TelasFinais : MonoBehaviour
 
    public void Restart()
    {
-    PlayerPrefs.DeleteAll();
-    SceneManager.LoadScene("cena1");
+        PlayerPrefs.DeleteAll();
+        FindObjectOfType<MusicaFundo>().tocarMusicaUma(fundo);
+        SceneManager.LoadScene("cena1");
    }
    public void Sair()
    {

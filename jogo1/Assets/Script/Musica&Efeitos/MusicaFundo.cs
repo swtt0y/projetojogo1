@@ -25,7 +25,7 @@ public class MusicaFundo : MonoBehaviour
             audioSource.Play();
         }
     }
-    
+
     public void trocarMusica(AudioClip novaMusica)
     {
         if (audioSource.clip == novaMusica) return;
