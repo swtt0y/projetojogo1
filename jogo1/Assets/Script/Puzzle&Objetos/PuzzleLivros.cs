@@ -43,7 +43,7 @@ public class PuzzleLivros : MonoBehaviour
         }
         else
         {
-            Debug.Log("Ordem incorreta! Tente novamente.");
+            dialogo3.Livro();
             tentativa.Clear();
         }
     }

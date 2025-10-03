@@ -9,6 +9,7 @@ public class Dialogo3 : MonoBehaviour
     public GameObject PadraoTexto;
     public GameObject SonicTexto;
     public GameObject ChaveTexto;
+    public GameObject LivroTexto;
 
     public void Gato()
     {
@@ -33,6 +34,7 @@ public class Dialogo3 : MonoBehaviour
         GatoTexto.SetActive(false);
         PadraoTexto.SetActive(false);
         ChaveTexto.SetActive(false);
+        LivroTexto.SetActive(false);
         DialogoBox.SetActive(true);
         SonicTexto.SetActive(true);
     }
@@ -44,5 +46,15 @@ public class Dialogo3 : MonoBehaviour
         SonicTexto.SetActive(false);
         DialogoBox.SetActive(true);
         ChaveTexto.SetActive(true);
+    }
+
+    public void Livro()
+    {
+        GatoTexto.SetActive(false);
+        PadraoTexto.SetActive(false);
+        SonicTexto.SetActive(false);
+        ChaveTexto.SetActive(false);
+        DialogoBox.SetActive(true);
+        LivroTexto.SetActive(true);
     }
 }

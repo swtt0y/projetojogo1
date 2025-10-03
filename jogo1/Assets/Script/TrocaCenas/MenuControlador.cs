@@ -13,6 +13,7 @@ public class MenuControlador : MonoBehaviour
     public void Jogar()
     {
         SceneManager.LoadScene("cena1");
+        PlayerPrefs.DeleteAll();
     }
     public GameObject infos;
 
